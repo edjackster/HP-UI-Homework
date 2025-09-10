@@ -13,6 +13,6 @@ public class HealthTextView : HealthView
 
     protected override void UpdateView(int health)
     {
-        _healthText.text = $"{health}/{_healthSystem.MaxHealthPoints}";
+        _healthText.text = $"{health}/{HealthSystem.MaxHealthPoints}";
     }
 }

@@ -30,7 +30,7 @@ public class HealthSmoothSliderView : HealthView
     {
         var wait = new WaitForSeconds(StepDuration);
         var stepsCount = _changeDuration / StepDuration;
-        var sliderEndValue = (float)health / _healthSystem.MaxHealthPoints;
+        var sliderEndValue = (float)health / HealthSystem.MaxHealthPoints;
         var step = Math.Abs((sliderEndValue - _slider.value) / stepsCount);
 
         for (var i = 0; i < stepsCount; i++)

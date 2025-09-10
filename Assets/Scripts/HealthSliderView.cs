@@ -13,6 +13,6 @@ public class HealthSliderView : HealthView
 
     protected override void UpdateView(int health)
     {
-        _slider.value = (float)health / _healthSystem.MaxHealthPoints;
+        _slider.value = (float)health / HealthSystem.MaxHealthPoints;
     }
 }

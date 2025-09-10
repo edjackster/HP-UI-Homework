@@ -3,17 +3,17 @@ using UnityEngine;
 
 public abstract class HealthView : MonoBehaviour
 {
-    [SerializeField] protected HealthSystem _healthSystem;
+    [SerializeField] protected HealthSystem HealthSystem;
 
     private void OnEnable()
     {
-        UpdateView(_healthSystem.HealthPoints);
-        _healthSystem.HealthChanged += UpdateView;
+        UpdateView(HealthSystem.HealthPoints);
+        HealthSystem.HealthChanged += UpdateView;
     }
 
     private void OnDisable()
     {
-        _healthSystem.HealthChanged -= UpdateView;
+        HealthSystem.HealthChanged -= UpdateView;
     }
 
     protected abstract void UpdateView(int health);
